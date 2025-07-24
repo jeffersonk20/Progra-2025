@@ -51,6 +51,7 @@
             this.btnSaludar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSaludar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaludar.Font = new System.Drawing.Font("Algerian", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaludar.ForeColor = System.Drawing.Color.Red;
             this.btnSaludar.Location = new System.Drawing.Point(241, 154);
             this.btnSaludar.Name = "btnSaludar";
             this.btnSaludar.Size = new System.Drawing.Size(382, 57);
