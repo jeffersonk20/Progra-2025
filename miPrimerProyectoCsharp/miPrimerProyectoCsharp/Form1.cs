@@ -22,14 +22,18 @@ namespace miPrimerProyectoCsharp
 
         }
 
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void btnSaludar_Click(object sender, EventArgs e)
+        private void btnCalcular_Click(object sender, EventArgs e)
         {
-            lblSaludo.Text = "Hola " + txtNombre.Text + ", bienvenido a mi primer proyecto en C#!";
+            double num1, num2, respuesta;
+            num1 = double.Parse( txtNum1.Text);
+
+            num2 = double.Parse( txtNum2.Text);
+
+            respuesta = num1 + num2;
+
+            lblRespuesta.Text = "Respuesta" + respuesta;
         }
     }
 }
