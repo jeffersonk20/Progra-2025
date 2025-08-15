@@ -1,0 +1,11 @@
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\bin\Debug\Laboratorio1Progra.exe.config
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\bin\Debug\Laboratorio1Progra.exe
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\bin\Debug\Laboratorio1Progra.pdb
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\obj\Debug\Laboratorio1Progra.csproj.AssemblyReference.cache
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\obj\Debug\Laboratorio1Progra.Form1.resources
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\obj\Debug\Laboratorio1Progra.Properties.Resources.resources
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\obj\Debug\Laboratorio1Progra.csproj.GenerateResource.cache
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\obj\Debug\Laboratorio1Progra.csproj.CoreCompileInputs.cache
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\obj\Debug\Laboratorio1Progra.exe
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\obj\Debug\Laboratorio1Progra.pdb
+C:\Users\jeffe\Progra-2025\Laboratorio1Progra\Laboratorio1Progra\obj\Debug\Laboratorio1Progra.exe.config

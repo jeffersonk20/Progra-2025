@@ -26,190 +26,171 @@ namespace miPrimerProyectoCsharp
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            double num1, num2 = 0, respuesta = 0;
-            bool esNum1Valido = double.TryParse(txtNum1.Text, out num1);
-            bool esNum2Valido = double.TryParse(txtNum2.Text, out num2);
+            double num1, num2, respuesta = 0;
+            num1 = double.Parse(txtNum1.Text);
 
-            if (!esNum1Valido)
-            {
-                lblRespuesta.Text = "Error: Número 1 inválido.";
-                return;
-            }
+            num2 = double.Parse(txtNum2.Text);
 
-            // Suma
+            //Suma
             if (optSuma.Checked)
             {
-                if (!esNum2Valido)
-                {
-                    lblRespuesta.Text = "Error: Número 2 inválido.";
-                    return;
-                }
                 respuesta = num1 + num2;
             }
-
-            // Resta
-             if (optResta.Checked)
+            //Resta
+            if (optResta.Checked)
             {
-                if (!esNum2Valido)
-                {
-                    lblRespuesta.Text = "Error: Número 2 inválido.";
-                    return;
-                }
                 respuesta = num1 - num2;
             }
-
-            // Multiplicación
-            else if (optMultiplicacion.Checked)
+            //Multiplicación
+            if (optMultiplicacion.Checked)
             {
-                if (!esNum2Valido)
-                {
-                    lblRespuesta.Text = "Error: Número 2 inválido.";
-                    return;
-                }
                 respuesta = num1 * num2;
             }
-
-            // División
-            else if (optDivision.Checked)
+            //División
+            if (optDivision.Checked)
             {
-                if (!esNum2Valido)
-                {
-                    lblRespuesta.Text = "Error: Número 2 inválido.";
-                    return;
-                }
-                if (num2 == 0)
-                {
-                    lblRespuesta.Text = "Error: División por cero.";
-                    return;
-                }
                 respuesta = num1 / num2;
             }
-
-            // Exponenciación
-            else if (optExponente.Checked)
+            //Exponenciación
+            if (optExponente.Checked)
             {
-                if (!esNum2Valido)
-                {
-                    lblRespuesta.Text = "Error: Número 2 inválido.";
-                    return;
-                }
-                respuesta = Math.Pow(num1, num2);
+                respuesta = Math.Pow(num1, num2);  //se usa la biblioteca ya que no se puede realizar la ecuación
             }
-
-            // Porcentaje
-            else if (optPorcentaje.Checked)
+            //Porcentaje
+            if (optPorcentaje.Checked)
             {
-                if (!esNum2Valido)
-                {
-                    lblRespuesta.Text = "Error: Número 2 inválido.";
-                    return;
-                }
                 respuesta = (num1 * num2) / 100;
             }
-
-            // Factorial
-            else if (optFactorial.Checked)
+            //Factorial
+            if (optFactorial.Checked)
             {
-                if (num1 < 0 || num1 != (int)num1)
-                {
-                    lblRespuesta.Text = "Error: El factorial solo acepta enteros positivos.";
-                    return;
-                }
-                int factorial = 1;
-                for (int i = 1; i <= (int)num1; i++)
+                int factorial = (int)num1;
+                for (int i = (int)num1 - 1; i > 1; i--)
                 {
                     factorial *= i;
                 }
                 respuesta = factorial;
             }
+            lblRespuesta.Text = "Respuesta: " + respuesta;
 
-             // Módulo
-             else if (optModulo.Checked)
+            //Primo
+            if (optPrimo.Checked)
             {
-                if (!esNum2Valido)
+                int i = 1, acum = 0;
+                while (i <= num1 && acum < 3)
                 {
-                    lblRespuesta.Text = "Error: Número 2 inválido.";
-                    return;
+                    if (num1 % i == 0)
+                    {
+                        acum++; //acum++ = acum +1
+                    }
+                    i++;
                 }
-                if (num2 == 0)
+                if (acum <= 2)
                 {
-                    lblRespuesta.Text = "Error: División por cero.";
-                    return;
+                    lblRespuesta.Text = "Respuesta: " + num1 + " es primo";
                 }
-                respuesta = num1 % num2;
+                else
+                {
+                    lblRespuesta.Text = "Respuesta: " + num1 + " no es primo.";
+                }
             }
 
-            lblRespuesta.Text = "Respuesta: " + respuesta;
+            //Modulo 
+            if (optModulo.Checked)
+            {
+                respuesta = num1 % num2;
+                lblRespuesta.Text = "Respuesta: " + respuesta;
+            }
+
+
+
         }
 
         private void btnCalcularOpciones_Click(object sender, EventArgs e)
         {
             double num1, num2, respuesta = 0;
-            bool esNum1Valido = double.TryParse(txtNum1.Text, out num1);
-            bool esNum2Valido = double.TryParse(txtNum2.Text, out num2);
+            num1 = double.Parse(txtNum1.Text);
+            num2 = double.Parse(txtNum2.Text); //ctrl+D para duplicar línea
 
-            if (!esNum1Valido)
-            {
-                lblRespuesta.Text = "Error: Número 1 inválido.";
-                return;
-            }
-            if (!esNum2Valido && cboOpciones.SelectedIndex != 6)
-            {
-                lblRespuesta.Text = "Error: Número 2 inválido.";
-                return;
-            }
-
+            //switch evalúa la condición y devuelve el indice del elemento seleccionado
             switch (cboOpciones.SelectedIndex)
             {
                 case 0:
-                    respuesta = num1 + num2;
+                    respuesta = num1 + num2; //Suma
                     break;
+
                 case 1:
-                    respuesta = num1 - num2;
+                    respuesta = num1 - num2; //Resta
                     break;
+
                 case 2:
-                    respuesta = num1 * num2;
+                    respuesta = num1 * num2; //Multiplicación
                     break;
+
                 case 3:
-                    if (num2 == 0)
-                    {
-                        lblRespuesta.Text = "Error: División por cero.";
-                        return;
-                    }
-                    respuesta = num1 / num2;
+                    respuesta = num1 / num2; //División
                     break;
+
                 case 4:
-                    respuesta = Math.Pow(num1, num2);
+                    respuesta = Math.Pow(num1, num2); //Exponenciación
                     break;
+
                 case 5:
-                    respuesta = (num1 * num2) / 100;
+                    respuesta = (num1 * num2) / 100; //Porcentaje
                     break;
-                case 6:
-                    if (num1 < 0 || num1 != (int)num1)
+
+                case 6://Factorial
                     {
-                        lblRespuesta.Text = "Error: El factorial solo acepta enteros positivos.";
-                        return;
+                        int factorial = (int)num1;
+                        for (int i = (int)num1 - 1; i > 1; i--)
+                        {
+                            factorial *= i;
+                        }
+                        respuesta = factorial;
+
+                        lblRespuesta.Text = "Respuesta: " + factorial;
+                        break;
                     }
-                    int factorial = 1;
-                    for (int i = 1; i <= (int)num1; i++)
-                    {
-                        factorial *= i;
-                    }
-                    respuesta = factorial;
-                    break;
+
                 case 7:
-                    if (num2 == 0)
+                    int b = 1, acum = 0;
+                    while (b <= num1 && acum < 3)
                     {
-                        lblRespuesta.Text = "Error: División por cero.";
-                        return;
+                        if (num1 % b == 0)
+                        {
+                            acum++;
+                        }
+                        b++;
                     }
+                    respuesta = (acum <= 2) ? 1 : 0; // 1 = primo, 0 = no primo
+                    break;
+
+                case 8: // Módulo
                     respuesta = num1 % num2;
+                    lblRespuesta.Text = "Respuesta: " + respuesta;
                     break;
             }
-            lblRespuesta.Text = " Respuesta " + respuesta;
-        }
-       
 
+            // Mostrar resultado
+            if (cboOpciones.SelectedIndex == 7)
+            {
+                lblRespuesta.Text = "Respuesta: " + num1 + ((respuesta == 1) ? " es primo." : " no es primo.");
+            }
+            else if (cboOpciones.SelectedIndex != 6 && cboOpciones.SelectedIndex != 8) // Evita duplicar el texto del factorial y módulo
+            {
+                lblRespuesta.Text = "Respuesta: " + respuesta;
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRespuesta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
