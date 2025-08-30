@@ -19,20 +19,40 @@ namespace miPrimerProyectoCsharp
 
         //Matices 
         //Funciones
-
+        //LINQ = Lenguaje de Consulta Integrado
 
         double media(int[] serie)
         {
-            return serie.Average();
+            int n = serie.Length;
+            double suma = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                suma += serie[i];
+            }
+            return suma / n;
         }
         double tipica(int[] serie, double m)
         {
-            return Math.Sqrt(serie.Average(n => Math.Pow(n - m, 2)));
+            double tipica = 0;
+            int n = serie.Length;
+
+            for (int i = 0; i < n; i++)
+            {
+                tipica += Math.Pow(serie[i] - m, 2);
+            }
+            tipica = Math.Sqrt(tipica / n);
+            return tipica;
         }
         double armonica(int[] serie)
         {
+            double mediaArmonica = 0;
             int n = serie.Length;
-            return n / serie.Sum(num => 1.0 / num);
+            for (int i = 0; i < n; i++)
+            {
+                mediaArmonica += 1 / (double)serie[i];
+            }
+            return n / mediaArmonica;
         }
 
 
@@ -47,7 +67,6 @@ namespace miPrimerProyectoCsharp
             lblMedia.Text = "Media: " + mediaAritmetica.ToString();
             lblTipica.Text = "Tipica: " + desviacionTipica.ToString();
             lblArmonica.Text = "Armonica: " + mediaArmonica.ToString();
-
         }
 
 
