@@ -28,138 +28,193 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTipoConversor = new System.Windows.Forms.Label();
-            this.lblRespuestaConversor = new System.Windows.Forms.Label();
-            this.txtCantidadConversor = new System.Windows.Forms.TextBox();
+            this.lblMonto = new System.Windows.Forms.Label();
+            this.lblMontoTotal = new System.Windows.Forms.Label();
+            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lblDe = new System.Windows.Forms.Label();
+            this.lblA = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnConvertir = new System.Windows.Forms.Button();
-            this.lblDeConversor = new System.Windows.Forms.Label();
-            this.lblAConversor = new System.Windows.Forms.Label();
-            this.lblCantidadConversor = new System.Windows.Forms.Label();
-            this.cboTipoConversor = new System.Windows.Forms.ComboBox();
-            this.cboAConversor = new System.Windows.Forms.ComboBox();
-            this.cboDeConversor = new System.Windows.Forms.ComboBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.cboDe = new System.Windows.Forms.ComboBox();
+            this.cboA = new System.Windows.Forms.ComboBox();
+            this.lblRespuesta = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblTipoConversor
+            // lblMonto
             // 
-            this.lblTipoConversor.AutoSize = true;
-            this.lblTipoConversor.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoConversor.Location = new System.Drawing.Point(107, 69);
-            this.lblTipoConversor.Name = "lblTipoConversor";
-            this.lblTipoConversor.Size = new System.Drawing.Size(64, 26);
-            this.lblTipoConversor.TabIndex = 0;
-            this.lblTipoConversor.Text = "Tipo:";
+            this.lblMonto.AutoSize = true;
+            this.lblMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonto.Location = new System.Drawing.Point(187, 96);
+            this.lblMonto.Name = "lblMonto";
+            this.lblMonto.Size = new System.Drawing.Size(86, 29);
+            this.lblMonto.TabIndex = 0;
+            this.lblMonto.Text = "Monto:";
             // 
-            // lblRespuestaConversor
+            // lblMontoTotal
             // 
-            this.lblRespuestaConversor.AutoSize = true;
-            this.lblRespuestaConversor.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRespuestaConversor.Location = new System.Drawing.Point(218, 379);
-            this.lblRespuestaConversor.Name = "lblRespuestaConversor";
-            this.lblRespuestaConversor.Size = new System.Drawing.Size(140, 26);
-            this.lblRespuestaConversor.TabIndex = 5;
-            this.lblRespuestaConversor.Text = "Respuesta: ?";
+            this.lblMontoTotal.AutoSize = true;
+            this.lblMontoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoTotal.Location = new System.Drawing.Point(187, 151);
+            this.lblMontoTotal.Name = "lblMontoTotal";
+            this.lblMontoTotal.Size = new System.Drawing.Size(172, 32);
+            this.lblMontoTotal.TabIndex = 1;
+            this.lblMontoTotal.Text = "Monto Total:";
             // 
-            // txtCantidadConversor
+            // txtMonto
             // 
-            this.txtCantidadConversor.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadConversor.Location = new System.Drawing.Point(223, 276);
-            this.txtCantidadConversor.Name = "txtCantidadConversor";
-            this.txtCantidadConversor.Size = new System.Drawing.Size(152, 27);
-            this.txtCantidadConversor.TabIndex = 6;
+            this.txtMonto.Location = new System.Drawing.Point(279, 103);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(100, 22);
+            this.txtMonto.TabIndex = 2;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(192, 212);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(152, 55);
+            this.btnCalcular.TabIndex = 3;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // lblDe
+            // 
+            this.lblDe.AutoSize = true;
+            this.lblDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDe.Location = new System.Drawing.Point(913, 220);
+            this.lblDe.Name = "lblDe";
+            this.lblDe.Size = new System.Drawing.Size(50, 29);
+            this.lblDe.TabIndex = 4;
+            this.lblDe.Text = "De:";
+            // 
+            // lblA
+            // 
+            this.lblA.AutoSize = true;
+            this.lblA.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblA.Location = new System.Drawing.Point(913, 266);
+            this.lblA.Name = "lblA";
+            this.lblA.Size = new System.Drawing.Size(34, 29);
+            this.lblA.TabIndex = 5;
+            this.lblA.Text = "A:";
+            this.lblA.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(889, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(375, 35);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Conversor de superficie (Area):";
             // 
             // btnConvertir
             // 
-            this.btnConvertir.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnConvertir.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnConvertir.Font = new System.Drawing.Font("Elephant", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConvertir.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnConvertir.Location = new System.Drawing.Point(467, 136);
+            this.btnConvertir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConvertir.Location = new System.Drawing.Point(953, 372);
             this.btnConvertir.Name = "btnConvertir";
-            this.btnConvertir.Size = new System.Drawing.Size(166, 63);
+            this.btnConvertir.Size = new System.Drawing.Size(157, 47);
             this.btnConvertir.TabIndex = 7;
             this.btnConvertir.Text = "Convertir";
-            this.btnConvertir.UseVisualStyleBackColor = false;
-            this.btnConvertir.Click += new System.EventHandler(this.btnConvertir_Click_1);
+            this.btnConvertir.UseVisualStyleBackColor = true;
+            this.btnConvertir.Click += new System.EventHandler(this.btnConvertir_Click);
             // 
-            // lblDeConversor
+            // lblCantidad
             // 
-            this.lblDeConversor.AutoSize = true;
-            this.lblDeConversor.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeConversor.Location = new System.Drawing.Point(107, 136);
-            this.lblDeConversor.Name = "lblDeConversor";
-            this.lblDeConversor.Size = new System.Drawing.Size(48, 26);
-            this.lblDeConversor.TabIndex = 8;
-            this.lblDeConversor.Text = "De:";
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Location = new System.Drawing.Point(913, 167);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(109, 29);
+            this.lblCantidad.TabIndex = 8;
+            this.lblCantidad.Text = "Cantidad";
             // 
-            // lblAConversor
+            // txtCantidad
             // 
-            this.lblAConversor.AutoSize = true;
-            this.lblAConversor.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAConversor.Location = new System.Drawing.Point(107, 206);
-            this.lblAConversor.Name = "lblAConversor";
-            this.lblAConversor.Size = new System.Drawing.Size(33, 26);
-            this.lblAConversor.TabIndex = 9;
-            this.lblAConversor.Text = "A:";
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(1044, 167);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 34);
+            this.txtCantidad.TabIndex = 9;
             // 
-            // lblCantidadConversor
+            // cboDe
             // 
-            this.lblCantidadConversor.AutoSize = true;
-            this.lblCantidadConversor.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadConversor.Location = new System.Drawing.Point(107, 277);
-            this.lblCantidadConversor.Name = "lblCantidadConversor";
-            this.lblCantidadConversor.Size = new System.Drawing.Size(110, 26);
-            this.lblCantidadConversor.TabIndex = 10;
-            this.lblCantidadConversor.Text = "Cantidad:";
+            this.cboDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDe.FormattingEnabled = true;
+            this.cboDe.Items.AddRange(new object[] {
+            "Pie Cuadrado",
+            "Vara Cuadrada",
+            "Yarda Cuadrada",
+            "Metro Cuadrado",
+            "Tareas",
+            "Manzanas",
+            "Hectáreas"});
+            this.cboDe.Location = new System.Drawing.Point(969, 212);
+            this.cboDe.Name = "cboDe";
+            this.cboDe.Size = new System.Drawing.Size(121, 37);
+            this.cboDe.TabIndex = 11;
             // 
-            // cboTipoConversor
+            // cboA
             // 
-            this.cboTipoConversor.FormattingEnabled = true;
-            this.cboTipoConversor.Items.AddRange(new object[] {
-            " Monedas",
-            " Longitud",
-            " Masa",
-            " Volumen",
-            " Almacenamiento",
-            " Tiempo",
-            "Area"});
-            this.cboTipoConversor.Location = new System.Drawing.Point(187, 70);
-            this.cboTipoConversor.Name = "cboTipoConversor";
-            this.cboTipoConversor.Size = new System.Drawing.Size(146, 24);
-            this.cboTipoConversor.TabIndex = 11;
-            this.cboTipoConversor.SelectedIndexChanged += new System.EventHandler(this.cboTipoConversor_SelectedIndexChanged_1);
+            this.cboA.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboA.FormattingEnabled = true;
+            this.cboA.Items.AddRange(new object[] {
+            "Pie Cuadrado",
+            "Vara Cuadrada",
+            "Yarda Cuadrada",
+            "Metro Cuadrado",
+            "Tareas",
+            "Manzanas",
+            "Hectáreas"});
+            this.cboA.Location = new System.Drawing.Point(953, 266);
+            this.cboA.Name = "cboA";
+            this.cboA.Size = new System.Drawing.Size(121, 37);
+            this.cboA.TabIndex = 12;
             // 
-            // cboAConversor
+            // lblRespuesta
             // 
-            this.cboAConversor.FormattingEnabled = true;
-            this.cboAConversor.Location = new System.Drawing.Point(146, 206);
-            this.cboAConversor.Name = "cboAConversor";
-            this.cboAConversor.Size = new System.Drawing.Size(146, 24);
-            this.cboAConversor.TabIndex = 12;
+            this.lblRespuesta.AutoSize = true;
+            this.lblRespuesta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRespuesta.Location = new System.Drawing.Point(913, 315);
+            this.lblRespuesta.Name = "lblRespuesta";
+            this.lblRespuesta.Size = new System.Drawing.Size(152, 29);
+            this.lblRespuesta.TabIndex = 13;
+            this.lblRespuesta.Text = "Respuesta: ?";
             // 
-            // cboDeConversor
+            // label2
             // 
-            this.cboDeConversor.FormattingEnabled = true;
-            this.cboDeConversor.Location = new System.Drawing.Point(161, 136);
-            this.cboDeConversor.Name = "cboDeConversor";
-            this.cboDeConversor.Size = new System.Drawing.Size(146, 24);
-            this.cboDeConversor.TabIndex = 13;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(129, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(320, 35);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Impuesto a las actividades";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 508);
-            this.Controls.Add(this.cboDeConversor);
-            this.Controls.Add(this.cboAConversor);
-            this.Controls.Add(this.cboTipoConversor);
-            this.Controls.Add(this.lblCantidadConversor);
-            this.Controls.Add(this.lblAConversor);
-            this.Controls.Add(this.lblDeConversor);
+            this.ClientSize = new System.Drawing.Size(1540, 508);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblRespuesta);
+            this.Controls.Add(this.cboA);
+            this.Controls.Add(this.cboDe);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnConvertir);
-            this.Controls.Add(this.txtCantidadConversor);
-            this.Controls.Add(this.lblRespuestaConversor);
-            this.Controls.Add(this.lblTipoConversor);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblA);
+            this.Controls.Add(this.lblDe);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.txtMonto);
+            this.Controls.Add(this.lblMontoTotal);
+            this.Controls.Add(this.lblMonto);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -170,16 +225,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTipoConversor;
-        private System.Windows.Forms.Label lblRespuestaConversor;
-        private System.Windows.Forms.TextBox txtCantidadConversor;
+        private System.Windows.Forms.Label lblMonto;
+        private System.Windows.Forms.Label lblMontoTotal;
+        private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Label lblDe;
+        private System.Windows.Forms.Label lblA;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnConvertir;
-        private System.Windows.Forms.Label lblDeConversor;
-        private System.Windows.Forms.Label lblAConversor;
-        private System.Windows.Forms.Label lblCantidadConversor;
-        private System.Windows.Forms.ComboBox cboTipoConversor;
-        private System.Windows.Forms.ComboBox cboAConversor;
-        private System.Windows.Forms.ComboBox cboDeConversor;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.ComboBox cboDe;
+        private System.Windows.Forms.ComboBox cboA;
+        private System.Windows.Forms.Label lblRespuesta;
+        private System.Windows.Forms.Label label2;
     }
 }
 
