@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace miPrimerProyectoCsharp
 {
-    public partial class Academica : Form
+    public partial class Docentes : Form
     {
-        public Academica()
+        public Docentes()
         {
             InitializeComponent();
         }
