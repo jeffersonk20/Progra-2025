@@ -77,3 +77,5 @@ C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyect
 C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.csproj.CoreCompileInputs.cache
 C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.exe
 C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.pdb
+C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.frmPrincipal.resources
+C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.frmDocente.resources

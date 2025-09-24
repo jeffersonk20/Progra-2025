@@ -180,6 +180,7 @@ namespace miPrimerProyectoCsharp
 
         private void txtBuscarAlumnos_TextChanged(object sender, EventArgs e)
         {
+
             filtrarDatos(txtBuscarAlumnos.Text);
         }
         private void filtrarDatos(String valor)
@@ -192,12 +193,15 @@ namespace miPrimerProyectoCsharp
 
         private void seleccionarAlumno()
         {
+
             var idValue = grdAlumnos.CurrentRow?.Cells["Id"].Value;
             if (idValue != null)
             {
                 var row = objDt.Rows.Find(idValue);
                 posicion = row != null ? objDt.Rows.IndexOf(row) : 0;
+
                 mostrarDatos();
+                
             }
         }
 
