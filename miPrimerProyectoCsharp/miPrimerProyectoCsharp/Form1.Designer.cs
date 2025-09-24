@@ -47,16 +47,16 @@
             this.lblIdDocente = new System.Windows.Forms.Label();
             this.grbBusquedaDocente = new System.Windows.Forms.GroupBox();
             this.grdDocentes = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscarDocentes = new System.Windows.Forms.TextBox();
             this.grbEdicionDocente = new System.Windows.Forms.GroupBox();
             this.btnEliminarDocente = new System.Windows.Forms.Button();
             this.btnModificarDocente = new System.Windows.Forms.Button();
             this.btnAgregarDocente = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbNavegacionDocente.SuspendLayout();
             this.grbDatosDocente.SuspendLayout();
             this.grbBusquedaDocente.SuspendLayout();
@@ -100,6 +100,7 @@
             this.btnUltimoDocente.TabIndex = 3;
             this.btnUltimoDocente.Text = ">|";
             this.btnUltimoDocente.UseVisualStyleBackColor = true;
+            this.btnUltimoDocente.Click += new System.EventHandler(this.btnUltimoDocente_Click);
             // 
             // btnSiguienteDocente
             // 
@@ -111,6 +112,7 @@
             this.btnSiguienteDocente.TabIndex = 2;
             this.btnSiguienteDocente.Text = ">";
             this.btnSiguienteDocente.UseVisualStyleBackColor = true;
+            this.btnSiguienteDocente.Click += new System.EventHandler(this.btnSiguienteDocente_Click);
             // 
             // btnAnteriorDocente
             // 
@@ -122,6 +124,7 @@
             this.btnAnteriorDocente.TabIndex = 1;
             this.btnAnteriorDocente.Text = "<";
             this.btnAnteriorDocente.UseVisualStyleBackColor = true;
+            this.btnAnteriorDocente.Click += new System.EventHandler(this.btnAnteriorDocente_Click);
             // 
             // btnPrimeroDocente
             // 
@@ -133,6 +136,7 @@
             this.btnPrimeroDocente.TabIndex = 0;
             this.btnPrimeroDocente.Text = "|<";
             this.btnPrimeroDocente.UseVisualStyleBackColor = true;
+            this.btnPrimeroDocente.Click += new System.EventHandler(this.btnPrimeroDocente_Click);
             // 
             // grbDatosDocente
             // 
@@ -260,6 +264,7 @@
             this.grbBusquedaDocente.TabIndex = 5;
             this.grbBusquedaDocente.TabStop = false;
             this.grbBusquedaDocente.Text = "Busqueda Docentes";
+            this.grbBusquedaDocente.Enter += new System.EventHandler(this.grbBusquedaDocente_Enter);
             // 
             // grdDocentes
             // 
@@ -279,10 +284,70 @@
             this.grdDocentes.RowHeadersWidth = 51;
             this.grdDocentes.Size = new System.Drawing.Size(619, 265);
             this.grdDocentes.TabIndex = 11;
+            this.grdDocentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDocentes_CellContentClick);
+            // 
+            // txtBuscarDocentes
+            // 
+            this.txtBuscarDocentes.Location = new System.Drawing.Point(8, 34);
+            this.txtBuscarDocentes.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarDocentes.Name = "txtBuscarDocentes";
+            this.txtBuscarDocentes.Size = new System.Drawing.Size(545, 22);
+            this.txtBuscarDocentes.TabIndex = 10;
+            this.txtBuscarDocentes.TextChanged += new System.EventHandler(this.txtBuscarDocentes_TextChanged);
+            // 
+            // grbEdicionDocente
+            // 
+            this.grbEdicionDocente.Controls.Add(this.btnEliminarDocente);
+            this.grbEdicionDocente.Controls.Add(this.btnModificarDocente);
+            this.grbEdicionDocente.Controls.Add(this.btnAgregarDocente);
+            this.grbEdicionDocente.Location = new System.Drawing.Point(501, 482);
+            this.grbEdicionDocente.Margin = new System.Windows.Forms.Padding(4);
+            this.grbEdicionDocente.Name = "grbEdicionDocente";
+            this.grbEdicionDocente.Padding = new System.Windows.Forms.Padding(4);
+            this.grbEdicionDocente.Size = new System.Drawing.Size(457, 69);
+            this.grbEdicionDocente.TabIndex = 6;
+            this.grbEdicionDocente.TabStop = false;
+            this.grbEdicionDocente.Text = "Edicion";
+            // 
+            // btnEliminarDocente
+            // 
+            this.btnEliminarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarDocente.Location = new System.Drawing.Point(275, 18);
+            this.btnEliminarDocente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarDocente.Name = "btnEliminarDocente";
+            this.btnEliminarDocente.Size = new System.Drawing.Size(133, 46);
+            this.btnEliminarDocente.TabIndex = 3;
+            this.btnEliminarDocente.Text = "Eliminar";
+            this.btnEliminarDocente.UseVisualStyleBackColor = true;
+            this.btnEliminarDocente.Click += new System.EventHandler(this.btnEliminarDocente_Click);
+            // 
+            // btnModificarDocente
+            // 
+            this.btnModificarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarDocente.Location = new System.Drawing.Point(135, 17);
+            this.btnModificarDocente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarDocente.Name = "btnModificarDocente";
+            this.btnModificarDocente.Size = new System.Drawing.Size(140, 46);
+            this.btnModificarDocente.TabIndex = 1;
+            this.btnModificarDocente.Text = "Modificar";
+            this.btnModificarDocente.UseVisualStyleBackColor = true;
+            this.btnModificarDocente.Click += new System.EventHandler(this.btnModificarDocente_Click);
+            // 
+            // btnAgregarDocente
+            // 
+            this.btnAgregarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarDocente.Location = new System.Drawing.Point(8, 18);
+            this.btnAgregarDocente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarDocente.Name = "btnAgregarDocente";
+            this.btnAgregarDocente.Size = new System.Drawing.Size(125, 46);
+            this.btnAgregarDocente.TabIndex = 0;
+            this.btnAgregarDocente.Text = "Nuevo";
+            this.btnAgregarDocente.UseVisualStyleBackColor = true;
+            this.btnAgregarDocente.Click += new System.EventHandler(this.btnAgregarDocente_Click);
             // 
             // id
             // 
-            this.id.DataPropertyName = "idAlumno";
+            this.id.DataPropertyName = "idDocente";
             this.id.HeaderText = "ID";
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
@@ -325,61 +390,6 @@
             this.telefono.Name = "telefono";
             this.telefono.ReadOnly = true;
             this.telefono.Width = 125;
-            // 
-            // txtBuscarDocentes
-            // 
-            this.txtBuscarDocentes.Location = new System.Drawing.Point(8, 34);
-            this.txtBuscarDocentes.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscarDocentes.Name = "txtBuscarDocentes";
-            this.txtBuscarDocentes.Size = new System.Drawing.Size(545, 22);
-            this.txtBuscarDocentes.TabIndex = 10;
-            // 
-            // grbEdicionDocente
-            // 
-            this.grbEdicionDocente.Controls.Add(this.btnEliminarDocente);
-            this.grbEdicionDocente.Controls.Add(this.btnModificarDocente);
-            this.grbEdicionDocente.Controls.Add(this.btnAgregarDocente);
-            this.grbEdicionDocente.Location = new System.Drawing.Point(501, 482);
-            this.grbEdicionDocente.Margin = new System.Windows.Forms.Padding(4);
-            this.grbEdicionDocente.Name = "grbEdicionDocente";
-            this.grbEdicionDocente.Padding = new System.Windows.Forms.Padding(4);
-            this.grbEdicionDocente.Size = new System.Drawing.Size(457, 69);
-            this.grbEdicionDocente.TabIndex = 6;
-            this.grbEdicionDocente.TabStop = false;
-            this.grbEdicionDocente.Text = "Edicion";
-            // 
-            // btnEliminarDocente
-            // 
-            this.btnEliminarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarDocente.Location = new System.Drawing.Point(275, 18);
-            this.btnEliminarDocente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminarDocente.Name = "btnEliminarDocente";
-            this.btnEliminarDocente.Size = new System.Drawing.Size(133, 46);
-            this.btnEliminarDocente.TabIndex = 3;
-            this.btnEliminarDocente.Text = "Eliminar";
-            this.btnEliminarDocente.UseVisualStyleBackColor = true;
-            // 
-            // btnModificarDocente
-            // 
-            this.btnModificarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarDocente.Location = new System.Drawing.Point(135, 17);
-            this.btnModificarDocente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificarDocente.Name = "btnModificarDocente";
-            this.btnModificarDocente.Size = new System.Drawing.Size(140, 46);
-            this.btnModificarDocente.TabIndex = 1;
-            this.btnModificarDocente.Text = "Modificar";
-            this.btnModificarDocente.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarDocente
-            // 
-            this.btnAgregarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarDocente.Location = new System.Drawing.Point(8, 18);
-            this.btnAgregarDocente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregarDocente.Name = "btnAgregarDocente";
-            this.btnAgregarDocente.Size = new System.Drawing.Size(125, 46);
-            this.btnAgregarDocente.TabIndex = 0;
-            this.btnAgregarDocente.Text = "Nuevo";
-            this.btnAgregarDocente.UseVisualStyleBackColor = true;
             // 
             // Docentes
             // 
@@ -426,16 +436,16 @@
         private System.Windows.Forms.Label lblIdDocente;
         private System.Windows.Forms.GroupBox grbBusquedaDocente;
         private System.Windows.Forms.DataGridView grdDocentes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.TextBox txtBuscarDocentes;
         private System.Windows.Forms.GroupBox grbEdicionDocente;
         private System.Windows.Forms.Button btnEliminarDocente;
         private System.Windows.Forms.Button btnModificarDocente;
         private System.Windows.Forms.Button btnAgregarDocente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
     }
 }
 
