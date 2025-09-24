@@ -62,7 +62,7 @@ namespace miPrimerProyectoCsharp
                 objComando.CommandText = sql;
 
                 objComando.Parameters.Clear();
-                objComando.Parameters.AddWithValue("@idAlumno", datos[0]);
+                objComando.Parameters.AddWithValue("@idDocente", datos[0]);
                 objComando.Parameters.AddWithValue("@codigo", datos[1]);
                 objComando.Parameters.AddWithValue("@nombre", datos[2]);
                 objComando.Parameters.AddWithValue("@direccion", datos[3]);
