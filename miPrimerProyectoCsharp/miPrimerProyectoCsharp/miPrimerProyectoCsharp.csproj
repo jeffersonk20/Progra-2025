@@ -124,6 +124,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="db_academicaDataSet.xsc">
       <DependentUpon>db_academicaDataSet.xsd</DependentUpon>
@@ -157,6 +158,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>db_academica.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\notas.jpg" />
+    <None Include="Resources\periodos,png.jpg" />
+    <None Include="Resources\materia.png" />
+    <None Include="Resources\Docente.png" />
+    <None Include="Resources\alumno.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
