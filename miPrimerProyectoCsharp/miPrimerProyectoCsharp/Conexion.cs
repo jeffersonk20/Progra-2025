@@ -32,6 +32,11 @@ namespace miPrimerProyectoCsharp
             objComando.CommandText = "SELECT * FROM alumnos";
             objAdaptador.Fill(objDs, "alumnos");//tomando  los datos de la tabla alumnos y llenando el dataset
 
+
+
+            objComando.CommandText = "SELECT * FROM Materia";
+            objAdaptador.Fill(objDs, "Materia");//Tomando los datos de la BD y llenando el DataSet
+
             return objDs;
         }
         public string administrarDatosAlumnos(String[] datos, String accion)
@@ -51,20 +56,31 @@ namespace miPrimerProyectoCsharp
             }
             return ejecutarSQL(sql, datos);
         }
+
+        public string administrarDatosMaterias(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+                sql = "INSERT INTO Materia(codigo,nombre,uv) VALUES ('" + datos[1] + "', '" + datos[2] + "', '" + datos[3] + "')";
+            }
+            else if (accion == "modificar")
+            {
+                sql = "UPDATE Materia SET codigo='" + datos[1] + "', nombre='" + datos[2] + "', uv='" + datos[3] + "' WHERE idMateria='" + datos[0] + "'";
+            }
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE FROM Materia WHERE idMateria='" + datos[0] + "'";
+            }
+            return ejecutarSQL(sql, datos);
+        }
         private String ejecutarSQL(String sql, String[] datos)
         {
+          
             try
             {
                 objComando.Connection = objConexion;
                 objComando.CommandText = sql;
-
-                objComando.Parameters.Clear();
-                objComando.Parameters.AddWithValue("@idAlumno", datos[0]);
-                objComando.Parameters.AddWithValue("@codigo", datos[1]);
-                objComando.Parameters.AddWithValue("@nombre", datos[2]);
-                objComando.Parameters.AddWithValue("@direccion", datos[3]);
-                objComando.Parameters.AddWithValue("@telefono", datos[4]);
-
                 return objComando.ExecuteNonQuery().ToString();
             }
             catch (Exception ex)
@@ -72,5 +88,6 @@ namespace miPrimerProyectoCsharp
                 return ex.Message;
             }
         }
+        }
     }
-}
+

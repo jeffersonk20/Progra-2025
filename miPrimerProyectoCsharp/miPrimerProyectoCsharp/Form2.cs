@@ -30,5 +30,12 @@ namespace miPrimerProyectoCsharp
             objDocente.MdiParent = this;
             objDocente.Show();
         }
+
+        private void materiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMateria objMateria = new frmMateria();
+            objMateria.MdiParent = this;
+            objMateria.Show();
+        }
     }
 }
