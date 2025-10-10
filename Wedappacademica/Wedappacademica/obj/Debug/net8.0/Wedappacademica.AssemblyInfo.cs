@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wedappacademica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec28d9f0025c5c7e0f693e2cb64f8836f9644c4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74bedec7851893fe02d4c60d0231243a44458648")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wedappacademica")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wedappacademica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
