@@ -42,17 +42,30 @@ namespace miPrimerProyectoCsharp
         public string administrarDatosDocente(String[] datos, String accion)
         {
             String sql = "";
+            objComando.Parameters.Clear(); // Limpiar parámetros previos
+
             if (accion == "nuevo")
             {
                 sql = "INSERT INTO Docente(codigo,nombre,direccion,telefono) VALUES (@codigo, @nombre, @direccion, @telefono)";
+                objComando.Parameters.AddWithValue("@codigo", datos[1]);
+                objComando.Parameters.AddWithValue("@nombre", datos[2]);
+                objComando.Parameters.AddWithValue("@direccion", datos[3]);
+                objComando.Parameters.AddWithValue("@telefono", datos[4]);
             }
+           //Modificar
             else if (accion == "modificar")
             {
                 sql = "UPDATE Docente SET codigo=@codigo, nombre=@nombre, direccion=@direccion, telefono=@telefono WHERE idDocente=@idDocente";
+                objComando.Parameters.AddWithValue("@codigo", datos[1]);
+                objComando.Parameters.AddWithValue("@nombre", datos[2]);
+                objComando.Parameters.AddWithValue("@direccion", datos[3]);
+                objComando.Parameters.AddWithValue("@telefono", datos[4]);
+                objComando.Parameters.AddWithValue("@idDocente", datos[0]);
             }
             else if (accion == "eliminar")
             {
                 sql = "DELETE FROM Docente WHERE idDocente=@idDocente";
+                objComando.Parameters.AddWithValue("@idDocente", datos[0]);
             }
             return ejecutarSQL(sql, datos);
         }

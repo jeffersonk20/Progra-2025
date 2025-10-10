@@ -81,3 +81,4 @@ C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyect
 C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.frmDocente.resources
 C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.frmMateria.resources
 C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.frmPeriodos.resources
+C:\Users\jeffe\OneDrive\Desktop\Academica\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.frmNotas.resources

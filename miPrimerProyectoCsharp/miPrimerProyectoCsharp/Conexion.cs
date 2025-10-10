@@ -76,11 +76,33 @@ namespace miPrimerProyectoCsharp
         }
         private String ejecutarSQL(String sql, String[] datos)
         {
-          
             try
             {
                 objComando.Connection = objConexion;
                 objComando.CommandText = sql;
+                objComando.Parameters.Clear(); // Limpia parámetros previos
+
+                // Detecta el tipo de consulta y agrega los parámetros necesarios
+                if (sql.Contains("INSERT INTO alumnos") || sql.Contains("UPDATE alumnos"))
+                {
+                    // Para insertar y modificar alumnos
+                    objComando.Parameters.AddWithValue("@codigo", datos[1]);
+                    objComando.Parameters.AddWithValue("@nombre", datos[2]);
+                    objComando.Parameters.AddWithValue("@direccion", datos[3]);
+                    objComando.Parameters.AddWithValue("@telefono", datos[4]);
+                    if (sql.Contains("UPDATE"))
+                    {
+                        objComando.Parameters.AddWithValue("@idAlumno", datos[0]);
+                    }
+                }
+                else if (sql.Contains("DELETE FROM alumnos"))
+                {
+                    // Para eliminar alumnos
+                    objComando.Parameters.AddWithValue("@idAlumno", datos[0]);
+                }
+
+                // Las consultas de Materia no usan parámetros, así que no se agregan aquí
+
                 return objComando.ExecuteNonQuery().ToString();
             }
             catch (Exception ex)
@@ -88,6 +110,6 @@ namespace miPrimerProyectoCsharp
                 return ex.Message;
             }
         }
-        }
     }
+}
 

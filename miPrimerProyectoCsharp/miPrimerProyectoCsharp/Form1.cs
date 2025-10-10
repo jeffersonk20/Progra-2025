@@ -193,15 +193,12 @@ namespace miPrimerProyectoCsharp
 
         private void seleccionarAlumno()
         {
-
-            var idValue = grdAlumnos.CurrentRow?.Cells["Id"].Value;
+            var idValue = grdAlumnos.CurrentRow?.Cells["id"].Value;
             if (idValue != null)
             {
                 var row = objDt.Rows.Find(idValue);
                 posicion = row != null ? objDt.Rows.IndexOf(row) : 0;
-
                 mostrarDatos();
-                
             }
         }
 
