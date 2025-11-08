@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeffe\\OneDrive\\Desktop\\APPSSS\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj": {}
+    "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeffe\\OneDrive\\Desktop\\APPSSS\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj": {
+    "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeffe\\OneDrive\\Desktop\\APPSSS\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
+        "projectUniqueName": "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
         "projectName": "Wedappacademica",
-        "projectPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\APPSSS\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
+        "projectPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
         "packagesPath": "C:\\Users\\jeffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\APPSSS\\Wedappacademica\\Wedappacademica\\obj\\",
+        "outputPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
