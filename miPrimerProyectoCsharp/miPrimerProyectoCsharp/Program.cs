@@ -16,7 +16,8 @@ namespace miPrimerProyectoCsharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Docentes());
+            // Cambiar el formulario inicial a frmPrincipal
+            Application.Run(new frmPrincipal());
         }
     }
 }
