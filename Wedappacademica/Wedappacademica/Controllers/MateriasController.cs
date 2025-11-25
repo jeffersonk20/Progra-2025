@@ -3,19 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Threading.Tasks;
 using Wedappacademica.Models;
 
-
-
-
-
-
-namespace Wedappacademica.Controllers
+namespace Webappacademica.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
     public class MateriasController : ControllerBase
@@ -126,6 +119,5 @@ namespace Wedappacademica.Controllers
         {
             return _context.Materias.Any(e => e.idMateria == id);
         }
-
     }
 }

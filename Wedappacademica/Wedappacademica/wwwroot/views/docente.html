@@ -74,7 +74,7 @@
     function seleccionarImg(file) {
         let archivo = file.files[0] || '';
         const lector = new FileReader();
-        lector.onload = e=> {
+        lector.onload = e => {
             miFoto = e.target.result;
             imgPreVisualizacionFotoDocente.src = miFoto;
         };
@@ -89,11 +89,11 @@
             email: txtEmailDocente.value,
             foto: miFoto.split(',')[1] || ''
         },
-            url = 'https://localhost:7005/api/Docentes',
+            url = 'https://localhost:7231/api/Docentes',
             method = 'POST';
         if (accion == "modificar") {
             method = 'PUT';
-            url = `https://localhost:7005/api/Docentes/${idDocente}`;
+            url = `https://localhost:7231/api/Docentes/${idDocente}`;
             datos.idDocente = idDocente;
         }
         const respuesta = await fetch(url, {
@@ -117,7 +117,7 @@
         txtTelefonoDocente.value = "";
         txtEmailDocente.value = "";
         miFoto = '';
-        imgPreVisualizacionFotoDocente.src= '';
+        imgPreVisualizacionFotoDocente.src = '';
     }
     function modificarDocente(docente) {
         accion = "modificar";

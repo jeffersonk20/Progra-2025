@@ -36,9 +36,9 @@
         listarMaterias(txtBuscarMateria.value);
     });
 
-    async function listarMaterias(buscar='') {
+    async function listarMaterias(buscar = '') {
         const respuesta = await fetch(`/api/Materias/buscar?buscar=${buscar}`, {
-            method:'GET',
+            method: 'GET',
             headers: {
                 "Content-Type": "application/json"
             }
@@ -59,7 +59,7 @@
     async function eliminarMateria(materia, event) {
         event.preventDefault();
 
-        if (confirm(`Esta seguro de eliminar a ${materia.nombre.trim()}?`) ) {
+        if (confirm(`Esta seguro de eliminar a ${materia.nombre.trim()}?`)) {
             const respuesta = await fetch(`/api/Materias/${materia.idMateria}`, {
                 method: 'DELETE',
                 headers: {

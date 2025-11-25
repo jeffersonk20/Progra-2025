@@ -7,8 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Wedappacademica.Models;
 
-
-namespace Wedappacademica.Controllers
+namespace Webappacademica.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

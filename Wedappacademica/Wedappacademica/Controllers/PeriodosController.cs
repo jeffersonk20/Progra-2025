@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Wedappacademica.Models;
 
-namespace Wedappacademica.Controllers
+namespace Webappacademica.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -20,23 +20,29 @@ namespace Wedappacademica.Controllers
             _context = context;
         }
 
+        // GET: api/Periodos
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Periodo>>> GetPeriodos()
+        {
+            return await _context.Periodos.ToListAsync();
+        }
+
         // GET: api/Periodos/buscar
         [HttpGet("buscar")]
-        public async Task<ActionResult<IEnumerable<Periodo>>> BuscarPeriodo([FromQuery] MateriaBusquedaParametros parametros)
+        public async Task<ActionResult<IEnumerable<Periodo>>> BuscarPeriodo([FromQuery] PeriodoBusquedaParametro parametros)
         {
             var consulta = _context.Periodos.AsQueryable();
             if (!string.IsNullOrEmpty(parametros.buscar))
             {
-                consulta = consulta.Where(Periodos => Periodos.fecha.Contains(parametros.buscar));
+                consulta = consulta.Where(periodo => periodo.fecha.ToString().Contains(parametros.buscar));
             }
             if (!string.IsNullOrEmpty(parametros.buscar) && consulta.Count() <= 0)
             {
                 consulta = _context.Periodos.AsQueryable();
-                consulta = consulta.Where(Periodos => Periodos.periodo.Contains(parametros.buscar));
+                consulta = consulta.Where(periodo => periodo.periodo.Contains(parametros.buscar));
             }
             return await consulta.ToListAsync();
         }
-
 
         // GET: api/Periodos/5
         [HttpGet("{id}")]
@@ -79,8 +85,7 @@ namespace Wedappacademica.Controllers
                     throw;
                 }
             }
-
-            return NoContent();
+            return CreatedAtAction("GetPeriodo", new { id = periodo.idPeriodo }, periodo);
         }
 
         // POST: api/Periodos

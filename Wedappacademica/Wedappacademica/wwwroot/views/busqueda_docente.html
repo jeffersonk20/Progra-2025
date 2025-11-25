@@ -39,9 +39,9 @@
         listarDocentes(txtBuscarDocente.value);
     });
 
-    async function listarDocentes(buscar='') {
+    async function listarDocentes(buscar = '') {
         const respuesta = await fetch(`/api/Docentes/buscar?buscar=${buscar}`, {
-            method:'GET',
+            method: 'GET',
             headers: {
                 "Content-Type": "application/json"
             }
@@ -55,7 +55,7 @@
                     <td>${docente.direccion}</td>
                     <td>${docente.telefono}</td>
                     <td>${docente.email}</td>
-                    <td><img width="80" src="${`data:image/png;base64,${docente.foto}` }" class="img-thumbnail rounded"/></td>
+                    <td><img width="80" src="${`data:image/png;base64,${docente.foto}`}" class="img-thumbnail rounded"/></td>
                     <td><button type="button" class="btn btn-outline-danger btn-sm" onClick='eliminarDocente(${JSON.stringify(docente)}, event)'>DEL</button>
                 </tr>
             `;
@@ -65,7 +65,7 @@
     async function eliminarDocente(docente, event) {
         event.preventDefault();
 
-        if (confirm(`Esta seguro de eliminar a ${docente.nombre.trim()}?`) ) {
+        if (confirm(`Esta seguro de eliminar a ${docente.nombre.trim()}?`)) {
             const respuesta = await fetch(`/api/Docentes/${docente.idDocente}`, {
                 method: 'DELETE',
                 headers: {

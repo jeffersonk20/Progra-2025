@@ -5,7 +5,7 @@
                 Consulta de Periodos
 
                 <div class="ms-auto">
-                    <button data-form="busqueda_Periodo" type="button" class="btn-close" aria-label="Close"></button>
+                    <button data-form="busqueda_periodo" type="button" class="btn-close" aria-label="Close"></button>
                 </div>
             </div>
         </div>
@@ -14,13 +14,13 @@
                 <thead>
                     <tr>
                         <th colspan="5">
-                            <input name="txtBuscarPeriodo" id="txtBuscarPeriodo" type="search" class="form-control" placeholder="Buscar Periodos por fecha, periodo" />
+                            <input name="txtBuscarPeriodo" id="txtBuscarPeriodo" type="search"
+                                   class="form-control" placeholder="Buscar periodos por fecha, periodo" />
                         </th>
                     </tr>
                     <tr>
                         <th>FECHA</th>
                         <th>PERIODO</th>
-                     
                         <th></th>
                     </tr>
                 </thead>
@@ -36,41 +36,34 @@
         listarPeriodos(txtBuscarPeriodo.value);
     });
 
-    async function listarPeriodos(buscar='') {
-        const respuesta = await fetch(`/api/Periodos/buscar?buscar=${buscar}`, {
-            method:'GET',
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }), Periodos = await respuesta.json();
-        let filas = '';
-        Periodos.forEach(Periodo => {
+    async function listarPeriodos(buscar = '') {
+        let periodos = await obtenerPeriodos(buscar),
+            filas = '';
+        periodos.forEach(periodo => {
             filas += `
-                <tr onClick='modificarPeriodo(${JSON.stringify(Periodo)})'>
-                    <td>${Periodo.fecha}</td>
-                    <td>${Periodo.nombre}</td>
-                    <td>${Periodo.uv}</td>
-                    <td><button type="button" class="btn btn-outline-danger btn-sm" onClick='eliminarPeriodo(${JSON.stringify(Periodo)}, event)'>DEL</button>
+                <tr onClick='modificarPeriodo(${JSON.stringify(periodo)})'>
+                    <td>${new Date(periodo.fecha).toLocaleDateString("en-GB")}</td>
+                    <td>${periodo.periodo}</td>
+                    <td><button type="button" class="btn btn-outline-danger btn-sm" onClick='eliminarPeriodo(${JSON.stringify(periodo)}, event)'>DEL</button>
                 </tr>
             `;
         });
         document.querySelector("#tblConsultaPeriodos > tbody").innerHTML = filas;
     }
-    async function eliminarPeriodo(Periodo, event) {
+    async function eliminarPeriodo(periodo, event) {
         event.preventDefault();
 
-        if (confirm(`Esta seguro de eliminar a ${Periodo.nombre.trim()}?`) ) {
-            const respuesta = await fetch(`/api/Periodos/${Periodo.idPeriodo}`, {
+        if (confirm(`Esta seguro de eliminar a ${periodo.periodo.trim()}?`)) {
+            const respuesta = await fetch(`/api/Periodos/${periodo.idPeriodo}`, {
                 method: 'DELETE',
                 headers: {
                     "Content-Type": "application/json"
                 }
             }), data = await respuesta.text();
             if (data && data.length > 0) {
-                alert(`Error, nose pudo eliminar el Periodo ${Periodo.nombre}, error: ${data}`);
+                alert(`Error, nose pudo eliminar el periodo ${periodo.periodo}, error: ${data}`);
                 return;
             }
             listarPeriodos();
         }
     }
-</script>
