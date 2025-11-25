@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj": {}
+    "C:\\Users\\jeffe\\OneDrive\\Desktop\\stiven\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj": {
+    "C:\\Users\\jeffe\\OneDrive\\Desktop\\stiven\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
+        "projectUniqueName": "C:\\Users\\jeffe\\OneDrive\\Desktop\\stiven\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
         "projectName": "Wedappacademica",
-        "projectPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
+        "projectPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\stiven\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
         "packagesPath": "C:\\Users\\jeffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\clase\\Wedappacademica\\Wedappacademica\\obj\\",
+        "outputPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\stiven\\Wedappacademica\\Wedappacademica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
