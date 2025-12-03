@@ -8192,11 +8192,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeffe\\OneDrive\\Desktop\\stiven\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
+      "projectUniqueName": "C:\\Users\\jeffe\\OneDrive\\Desktop\\steventrabajoyo\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
       "projectName": "Wedappacademica",
-      "projectPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\stiven\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
+      "projectPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\steventrabajoyo\\Wedappacademica\\Wedappacademica\\Wedappacademica.csproj",
       "packagesPath": "C:\\Users\\jeffe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\stiven\\Wedappacademica\\Wedappacademica\\obj\\",
+      "outputPath": "C:\\Users\\jeffe\\OneDrive\\Desktop\\steventrabajoyo\\Wedappacademica\\Wedappacademica\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

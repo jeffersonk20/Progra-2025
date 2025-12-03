@@ -70,4 +70,11 @@
             listarAlumnos();
         }
     }
+    function mostrarDatosAlumno(alumno) {
+        if (formActivo == "matricula") {
+            txtAlumnoMatricula.value = alumno.nombre;
+        } else {
+            modificarAlumno(alumno);
+        }
+    }
 </script>
